@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Frontend Mentor | Fylo data storage component</title>
+</head>
+<body>
+  <main class="container">
+    <div class="box box--fylo">
+      <img src="./images/logo.svg" alt="Fylo" class="box__logo">
+      <div class="box__icons">
+        <div class="icon-box">
+          <img src="./images/icon-document.svg" alt="document" class="icon-box__icon">
+        </div>
+        <div class="icon-box">
+          <img src="./images/icon-folder.svg" alt="folder" class="icon-box__icon">
+        </div>
+        <div class="icon-box">
+          <img src="./images/icon-upload.svg" alt="upload" class="icon-box__icon">
+        </div>
+      </div>
+    </div>
+    <div class="box box--storage storage">
+      <p class="storage__used">You’ve used <span>815 GB</span> of your storage</p>
+      <!-- Storage Bar -->
+      <div class="storage__bar bar">
+        <div class="bar__container">
+          <span class="bar__progress"><span class="bar__white-circle"></span></span>
+        </div>
+        <div class="bar__stats">
+          <h4 class="bar__number">0 GB</h4>
+          <h4 class="bar__number">1000 GB</h4>
+        </div>
+      </div>
+      <!-- End of Storage Bar -->
+      <!-- Storage Left -->
+      <div class="storage__left">
+        <h2 class="storage__info">185 <span>GB Left</span>
+        </h2>
+      </div>
+      <!-- End of Storage Left -->
+    </div>
+  </main>
+</body>
+</html>
