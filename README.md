@@ -8,7 +8,7 @@ computer or laptop ☺️.
 
 ## Feedback and Live Review
 
-Feel free to give [feedback]() to me on Frontend Mentor and here is
+Feel free to give [feedback](https://www.frontendmentor.io/solutions/fylo-data-storage-component-html5-css3-sass-e7hLUV_B8) to me on Frontend Mentor and here is
 [live review](https://fylo-data-storage-vs.netlify.app/)
 
 ## Tools
