@@ -384,6 +384,24 @@ body {
     max-width: 31.25rem;
   }
 }
+@media screen and (min-width: 75em) {
+  .container {
+    display: flex;
+    gap: 2.1875rem;
+    max-width: 56.25rem;
+  }
+  .container > *:first-child {
+    flex-basis: 21.875rem;
+  }
+  @supports not (gap: 2.1875rem) {
+    .container > *:first-child {
+      margin-right: 2.1875rem;
+    }
+  }
+  .container > *:last-child {
+    flex-basis: 34.375rem;
+  }
+}
 
 .box {
   margin-bottom: 1rem;
@@ -411,6 +429,11 @@ body {
   height: 3rem;
   width: 3rem;
 }
+@supports not (gap: 1rem) {
+  .icon-box:not(:last-child) {
+    margin-right: 1rem;
+  }
+}
 
 .storage {
   position: relative;
@@ -418,13 +441,30 @@ body {
   padding-bottom: 2.5rem;
   color: #dddbff;
 }
-.storage__left {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@media screen and (min-width: 75em) {
+  .storage {
+    align-self: flex-end;
+    padding: 1.875rem;
+  }
+}
+.storage__box {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+}
+@media screen and (min-width: 75em) {
+  .storage__box {
+    top: -3.125rem;
+    left: initial;
+    right: 1.875rem;
+    transform: translateX(0);
+  }
+}
+.storage__left {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 0.5em;
   background-color: white;
   width: 10.625rem;
@@ -436,6 +476,11 @@ body {
 .storage__used {
   text-align: center;
   margin-bottom: 0.9375rem;
+}
+@media screen and (min-width: 75em) {
+  .storage__used {
+    text-align: left;
+  }
 }
 .storage__used > span {
   font-weight: 700;
@@ -452,6 +497,11 @@ body {
   text-transform: uppercase;
   color: #848794;
   font-size: 0.875rem;
+}
+@supports not (gap: 0.625rem) {
+  .storage__info > span {
+    margin-left: 0.625rem;
+  }
 }
 
 .bar {
@@ -494,4 +544,22 @@ body {
   justify-content: space-between;
   margin-bottom: 0.875rem;
   font-size: 0.75rem;
+}
+
+@media screen and (min-width: 75em) {
+  .right-triangle {
+    position: absolute;
+    bottom: -1.6875rem;
+    right: 0;
+    -webkit-clip-path: polygon(100% 0, 0 0, 100% 100%);
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+    background-color: white;
+    height: 2rem;
+    width: 2rem;
+  }
+  @supports not ((-webkit-clip-path: polygon(100% 0, 0 0, 100% 100%)) or (clip-path: polygon(100% 0, 0 0, 100% 100%))) {
+    .right-triangle {
+      display: none;
+    }
+  }
 }
